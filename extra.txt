@@ -1,0 +1,15 @@
+// for (var i = 0; i < results.length; i++) {
+        //     var employee = results[i];
+        //     console.log(
+        //         employee.first_name +
+        //         "\t\t" +
+        //         employee.last_name +
+        //         "\t\t" +
+        //         employee.role_id +
+        //         "\t\t" +
+        //         employee.manager_id
+        //     );
+        // }
+
+
+        
