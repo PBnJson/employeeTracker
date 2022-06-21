@@ -1,7 +1,7 @@
-const Sequelize = require("sequelize");
+// const Sequelize = require("sequelize");
 const connection = require("./connection.js");
 const index = require("./index.js");
-const table = require("console.table");
+
 const inquirer = require("inquirer");
 
 const Commands = {
@@ -93,7 +93,7 @@ const Commands = {
             });
     },
     addDepartment() {
-        return inquierer
+        return inquirer
             .prompt([{
                 type: "input",
                 message: "Do you want to add a department?",
@@ -104,6 +104,23 @@ const Commands = {
                 connection.query(db, [data.dept_name], function(errors, results) {
                     console.log("New Department Added");
                 });
+            });
+    },
+    updateEmployeeRole() {
+        return inquirer
+            .prompt([{
+                type: "input",
+                message: "Do you want to update and employee's information",
+                name: "update",
+            }, ])
+            .then((data) => {
+                const db = `UPDATE employee SET roles = ? WHERE id = ?`;
+                connection.query(
+                    db, [data.employee, data.roles],
+                    function(errors, results) {
+                        console.log("Employee Updated!");
+                    }
+                );
             });
     },
 };

@@ -18,16 +18,16 @@ const promptUser = () => {
                 "View All Employees",
                 "View All Roles",
                 "View All Departments",
-                "View All Employees By Department",
-                "View Department Budgets",
+                // "View All Employees By Department",
+                // "View Department Budgets",
                 "Update Employee Role",
-                "Update Employee Manager",
+                // "Update Employee Manager",
                 "Add Employee",
                 "Add Role",
                 "Add Department",
-                "Remove Employee",
-                "Remove Role",
-                "Remove Department",
+                // "Remove Employee",
+                // "Remove Role",
+                // "Remove Department",
                 "Exit",
             ],
         }, ])
@@ -46,20 +46,20 @@ const promptUser = () => {
 
             if (choices === "Add Employee") {
                 addEmployee();
-                askagain();
+                // askagain();
             }
 
-            if (choices === "Remove Employee") {
-                removeEmployee();
-            }
+            // if (choices === "Remove Employee") {
+            //     removeEmployee();
+            // }
 
             if (choices === "Update Employee Role") {
                 updateEmployeeRole();
             }
 
-            if (choices === "Update Employee Manager") {
-                updateEmployeeManager();
-            }
+            // if (choices === "Update Employee Manager") {
+            //     updateEmployeeManager();
+            // }
 
             if (choices === "View All Roles") {
                 viewRoles();
@@ -69,21 +69,17 @@ const promptUser = () => {
                 addRole();
             }
 
-            if (choices === "Remove Role") {
-                removeRole();
-            }
+            // if (choices === "Remove Role") {
+            //     removeRole();
+            // }
 
             if (choices === "Add Department") {
                 addDepartment();
             }
 
-            if (choices === "View Department Budgets") {
-                viewDepartmentBudget();
-            }
-
-            if (choices === "Remove Department") {
-                removeDepartment();
-            }
+            // if (choices === "Remove Department") {
+            //     removeDepartment();
+            // }
 
             if (choices === "Exit") {
                 connection.end();
@@ -107,4 +103,3 @@ function askagain() {
             }
         });
 }
-// module.exports = promptUser;
